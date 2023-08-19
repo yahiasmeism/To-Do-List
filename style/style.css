@@ -1,0 +1,239 @@
+/* Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #1f1f1f;
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+}
+
+button {
+  box-shadow: 0px 3px 5px rgba(168, 168, 168, 0, 38);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.tasks-table {
+  margin: 0px auto 0;
+  width: 100%;
+  background-color: rgb(155, 52, 52);
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .tasks-table {
+    margin-top: 30px;
+    width: 90%;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tasks-table {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tasks-table {
+    width: 70%;
+  }
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    font-size: 20px;
+  }
+}
+
+
+#add-btn {
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  font-size: 20px;
+}
+
+#add-btn:hover {
+  transform: translateY(-50%)scale(1.1);
+}
+
+
+#clear-btn {
+  display: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+
+}
+
+#clear-btn:hover {
+  transform: scale(1.1);
+}
+
+
+@media (min-width: 768px) {
+  #add-btn:hover {
+    background-color: #dacbcb;
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+/* 
+  TASKS TABLE
+*/
+#tasks {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (min-width: 768px) {
+  #tasks {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+.task {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  transition: box-shadow 0.2s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task:hover {
+  box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.843);
+}
+
+.task .info {
+  width: 60%;
+  word-break: break-all;
+}
+
+@media (min-width:768px) {
+  .task .info {
+    width: 70%;
+  }
+}
+
+.task .info h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.task .btns-action {
+  width: 120px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .task .btns-action {
+    width: 150px;
+  }
+}
+
+.btns-action button {
+  color: #fff !important;
+}
+
+.btns-action button:nth-child(3) {
+  background: rgb(199, 11, 11);
+}
+
+.btns-action button:nth-child(2) {
+  background: rgb(52, 54, 155);
+}
+
+.btns-action button:nth-child(1) {
+  background: #999;
+}
+
+.done {
+  background: rgba(94, 94, 94, 0.34);
+}
+
+#check {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#check input {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  appearance: none;
+  border: 2px solid rgba(0, 0, 0, 0.60);
+  outline: none;
+  cursor: pointer;
+}
+
+#check input:checked {
+  background-color: rgba(0, 128, 0, 0.705);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#check input:checked::after {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: white;
+  font-size: 15px
+}
+
+
+
+/* ======================== */
